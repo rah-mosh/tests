@@ -1,6 +1,6 @@
 import json
 
-global_secret = "NOT SET"
+global_secret = "---|||---|||---|||---"
 
 class Score:
     def __init__(self, max, weight, test_name):
