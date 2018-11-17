@@ -2,7 +2,7 @@ import unittest
 from pathlib import Path
 from test.score import Score
 from test.code_extractor import extract
-from user.DAT110.exercise1 import falling_object, sum_integers
+from user.DAT110.exercise1_1 import falling_object, sum_integers
 
 
 import os
