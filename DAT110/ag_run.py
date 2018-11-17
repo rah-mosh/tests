@@ -18,6 +18,7 @@ except:
 
 
 score = Score(10, 10, 'TestFallingObject')
+score.increment_by(1)
 score.write_json()
 filename = '/root/user/DAT110/exercise1.ipynb'
 f = Path(filename)
