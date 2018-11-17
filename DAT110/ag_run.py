@@ -5,6 +5,9 @@ from test.code_extractor import extract
 from user.DAT110.exercise1 import falling_object, sum_integers
 
 
+import os
+print(os.getcwd())
+
 print('Extracting code fro ipynb.')
 path_wo_fileending = '../user/DAT110/exercise1'
 try:
