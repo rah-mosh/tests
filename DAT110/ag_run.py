@@ -50,6 +50,10 @@ class TestSumIntegers(unittest.TestCase):
     score = Score(8, 20, 'TestSumIntegers')
     points_worth = 0
 
+    @classmethod
+    def tearDownClass(cls):
+        print(cls.score.write_json())
+
     def tearDown(self):  # https://stackoverflow.com/questions/4414234/getting-pythons-unittest-results-in-a-teardown-method : hynekcer
         result = self.defaultTestResult()
         self._feedErrorsToResult(result, self._outcome.errors)
@@ -58,7 +62,6 @@ class TestSumIntegers(unittest.TestCase):
         ok = not error and not failure
         if ok:
             self.score.increment_by(self.points_worth)
-        print(self.score.write_json())
 
     def test_normal_case_1(self):
         self.points_worth = 2
