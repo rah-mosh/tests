@@ -4,8 +4,12 @@ from test.score import Score
 from user.DAT110.exercise1 import falling_object, sum_integers
 
 print('Extracting code fro ipynb.')
-success = extract('/root/user/DAT110/exercise1.ipynb', '/root/user/DAT110/exercise1.py')
-print('Code extraction was {}'.format('successful.' if success else 'unsuccessful.'))
+try:
+    success = extract('/root/user/DAT110/exercise1.ipynb', '/root/user/DAT110/exercise1.py')
+    print('Code extraction was successful.')
+except:
+    print('Code extraction was unsuccessful.')
+#print('Code extraction was {}'.format('successful.' if success else 'unsuccessful.'))
 
 class TestFallingObject(unittest.TestCase):
     score = Score(10, 10, 'TestFallingObject')
