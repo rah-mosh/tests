@@ -7,13 +7,13 @@ from user.DAT110.exercise1 import falling_object, sum_integers
 
 print('Extracting code fro ipynb.')
 try:
-    filename = '../../user/DAT110/exercise1.ipynb'
+    filename = '../user/DAT110/exercise1.ipynb'
     f = Path(filename)
     print('Could find filename: {}'.format(f.is_file()))
 
-    success = extract('../../user/DAT110/exercise1.ipynb', '../../user/DAT110/exercise1.py')
+    success = extract('../user/DAT110/exercise1.ipynb', '../user/DAT110/exercise1.py')
 
-    filename = '../../user/DAT110/exercise1.py'
+    filename = '../user/DAT110/exercise1.py'
     f = Path(filename)
     print('Could find filename: {}'.format(f.is_file()))
 
@@ -81,5 +81,5 @@ class TestSumIntegers(unittest.TestCase):
         self.points_worth = 2
         with self.assertRaises(Exception): sum_integers([1, 20, -1])
 
-#if __name__ == '__main__':
-    #unittest.main()
+if __name__ == '__main__':
+    unittest.main()
