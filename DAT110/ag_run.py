@@ -4,7 +4,7 @@ from test.score import Score
 from user.DAT110.exercise1 import falling_object, sum_integers
 
 
-extract('user/DAT110/exercise1.ipynb', 'user/DAT110/exercise1.py')
+extract('/root/user/DAT110/exercise1.ipynb', '/root/user/DAT110/exercise1.py')
 
 
 class TestFallingObject(unittest.TestCase):
