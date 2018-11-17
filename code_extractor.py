@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 import json
 
 # Extracts code in Jupyter Notebook files to a new Python file
@@ -16,6 +17,7 @@ def extract(filename, new_filename):
                 code_cells.append(cell['source'])
 
     with open (new_filename, 'w+') as file:
+        print('Extracting file to {}'.format(os.getcwd()))
         for cell in code_cells:
             file.write('\n\n' + ''.join(str(line) for line in cell))
 
