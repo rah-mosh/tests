@@ -1,19 +1,19 @@
-from test.code_extractor import extract
 import unittest
+from pathlib import Path
 from test.score import Score
+from test.code_extractor import extract
 from user.DAT110.exercise1 import falling_object, sum_integers
 
 print('Extracting code fro ipynb.')
 try:
-    #success = extract('/root/user/DAT110/exercise1.ipynb', '/root/user/DAT110/exercise1.py')
+    filename = '/root/user/DAT110/exercise1.ipynb'
+    f = Path(filename)
+    print('Could find filename: {}'.format(f.is_file()))
+    success = extract('/root/user/DAT110/exercise1.ipynb', '/root/user/DAT110/exercise1.py')
     print('Code extraction was successful.')
 except:
     print('Code extraction was unsuccessful.')
 #print('Code extraction was {}'.format('successful.' if success else 'unsuccessful.'))
-from pathlib import Path
-filename = '/root/user/DAT110/exercise1.ipynb'
-f = Path(filename)
-print('Could find filename: {}'.format(f.is_file()))
 
 
 
