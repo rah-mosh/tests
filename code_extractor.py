@@ -1,5 +1,4 @@
 from pathlib import Path
-import os
 import json
 
 # Extracts code in Jupyter Notebook files to a new Python file

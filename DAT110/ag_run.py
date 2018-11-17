@@ -13,7 +13,7 @@ success = extract(path_wo_fileending + '.ipynb', path_wo_fileending + '.py')
 print('Code extraction was {}'.format('successful.' if success else 'unsuccessful.'))
 
 
-from user.DAT110.exercise1_1 import falling_object, sum_integers
+from user.DAT110.exercise1 import falling_object, sum_integers
 
 
 class TestFallingObject(unittest.TestCase):
