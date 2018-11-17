@@ -9,7 +9,7 @@ import os
 print(os.getcwd())
 
 print('Extracting code fro ipynb.')
-path_wo_fileending = 'user/DAT110/exercise1'
+path_wo_fileending = 'user/DAT110/exercise1_1'
 try:
     filename = path_wo_fileending + '.ipynb'
     f = Path(filename)
