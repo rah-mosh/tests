@@ -3,37 +3,17 @@ from pathlib import Path
 from test.score import Score
 from test.code_extractor import extract
 
-
-import os
-print(os.getcwd())
-
 print('Extracting code fro ipynb.')
-path_wo_fileending = 'user/DAT110/exercise1_1'
-try:
-    filename = path_wo_fileending + '.ipynb'
-    f = Path(filename)
-    print('Could find filename: {}'.format(f.is_file()))
+path_wo_fileending = 'user/DAT110/exercise1'
 
-    success = extract(path_wo_fileending + '.ipynb', path_wo_fileending + '.py')
+f = Path(path_wo_fileending + '.ipynb')
+print('Could {} find file.'.format('not' if not f.is_file() else ''))
 
-    filename = path_wo_fileending + '.py'
-    f = Path(filename)
-    print('Could find filename: {}'.format(f.is_file()))
+success = extract(path_wo_fileending + '.ipynb', path_wo_fileending + '.py')
+print('Code extraction was {}'.format('successful.' if success else 'unsuccessful.'))
 
-    print('Code extraction was successful.')
-except:
-    print('Code extraction was unsuccessful.')
-#print('Code extraction was {}'.format('successful.' if success else 'unsuccessful.'))
 
 from user.DAT110.exercise1_1 import falling_object, sum_integers
-from os import listdir
-files = [f for f in listdir('./')]
-print(files)
-files = [f for f in listdir('./user')]
-print(files)
-files = [f for f in listdir('./user/DAT110')]
-print(files)
-
 
 
 class TestFallingObject(unittest.TestCase):

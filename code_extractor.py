@@ -3,6 +3,7 @@ import os
 import json
 
 # Extracts code in Jupyter Notebook files to a new Python file
+# extract('../assignments/DAT110_ass1/falling_object.ipynb', 'falling_object.py')
 def extract(filename, new_filename):
     code_cells = []
     f = Path(filename)
@@ -17,11 +18,8 @@ def extract(filename, new_filename):
                 code_cells.append(cell['source'])
 
     with open (new_filename, 'w+') as file:
-        print('Extracting file to {} + {}'.format(os.getcwd(), Path(new_filename).absolute()))
         for cell in code_cells:
             file.write('\n\n' + ''.join(str(line) for line in cell))
 
-    print('Code extracted to {}'.format(Path(new_filename).absolute()))
     return True
 
-#extract('../assignments/DAT110_ass1/falling_object.ipynb', 'falling_object.py')
