@@ -3,34 +3,24 @@ from pathlib import Path
 from test.score import Score
 from test.code_extractor import extract
 from user.DAT110.exercise1 import falling_object, sum_integers
-'''
+
+
 print('Extracting code fro ipynb.')
 try:
-    filename = '/root/user/DAT110/exercise1.ipynb'
+    filename = '../../user/DAT110/exercise1.ipynb'
     f = Path(filename)
     print('Could find filename: {}'.format(f.is_file()))
-    success = extract('/root/user/DAT110/exercise1.ipynb', '/root/user/DAT110/exercise1.py')
+
+    success = extract('../../user/DAT110/exercise1.ipynb', '../../user/DAT110/exercise1.py')
+
+    filename = '../../user/DAT110/exercise1.py'
+    f = Path(filename)
+    print('Could find filename: {}'.format(f.is_file()))
+
     print('Code extraction was successful.')
 except:
     print('Code extraction was unsuccessful.')
 #print('Code extraction was {}'.format('successful.' if success else 'unsuccessful.'))
-'''
-
-
-score = Score(10, 10, 'TestFallingObject')
-score.increment_by(1)
-score.write_json()
-filename = '/root/user/DAT110/exercise1.ipynb'
-f = Path(filename)
-print('Could find filename: {}'.format(f.is_file()))
-'''try:
-    success = extract('/root/user/DAT110/exercise1.ipynb', '/root/user/DAT110/exercise1.py')
-except:
-    print('Code extraction was unsuccessful.')'''
-filename = '/root/user/DAT110/exercise1.py'
-f = Path(filename)
-print('Could find filename: {}'.format(f.is_file()))
-
 
 
 
