@@ -2,7 +2,6 @@ import unittest
 from pathlib import Path
 from test.score import Score
 from test.code_extractor import extract
-from user.DAT110.exercise1_1 import falling_object, sum_integers
 
 
 import os
@@ -26,7 +25,7 @@ except:
     print('Code extraction was unsuccessful.')
 #print('Code extraction was {}'.format('successful.' if success else 'unsuccessful.'))
 
-
+from user.DAT110.exercise1_1 import falling_object, sum_integers
 from os import listdir
 files = [f for f in listdir('./')]
 print(files)
