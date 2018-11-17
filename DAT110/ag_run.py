@@ -3,9 +3,9 @@ import unittest
 from test.score import Score
 from user.DAT110.exercise1 import falling_object, sum_integers
 
-
-extract('/root/user/DAT110/exercise1.ipynb', '/root/user/DAT110/exercise1.py')
-
+print('Extracting code fro ipynb.')
+success = extract('/root/user/DAT110/exercise1.ipynb', '/root/user/DAT110/exercise1.py')
+print('Code extraction was {}'.format('successful.' if success else 'unsuccessful.'))
 
 class TestFallingObject(unittest.TestCase):
     score = Score(10, 10, 'TestFallingObject')
