@@ -23,10 +23,10 @@ score.write_json()
 filename = '/root/user/DAT110/exercise1.ipynb'
 f = Path(filename)
 print('Could find filename: {}'.format(f.is_file()))
-try:
+'''try:
     success = extract('/root/user/DAT110/exercise1.ipynb', '/root/user/DAT110/exercise1.py')
 except:
-    print('Code extraction was unsuccessful.')
+    print('Code extraction was unsuccessful.')'''
 filename = '/root/user/DAT110/exercise1.py'
 f = Path(filename)
 print('Could find filename: {}'.format(f.is_file()))
