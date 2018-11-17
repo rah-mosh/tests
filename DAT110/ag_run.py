@@ -11,6 +11,8 @@ try:
     print('Could find filename: {}'.format(f.is_file()))
     success = extract('/root/user/DAT110/exercise1.ipynb', '/root/user/DAT110/exercise1.py')
     print('Code extraction was successful.')
+    filename = '/root/user/DAT110/exercise1.py'
+    f = Path(filename)
 except:
     print('Code extraction was unsuccessful.')
 #print('Code extraction was {}'.format('successful.' if success else 'unsuccessful.'))
@@ -76,4 +78,4 @@ class TestSumIntegers(unittest.TestCase):
         with self.assertRaises(Exception): sum_integers([1, 20, -1])
 
 if __name__ == '__main__':
-    unittest.main()
+    #unittest.main()
