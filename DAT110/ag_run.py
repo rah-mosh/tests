@@ -30,6 +30,10 @@ except:
 from os import listdir
 files = [f for f in listdir('./')]
 print(files)
+files = [f for f in listdir('./user')]
+print(files)
+files = [f for f in listdir('./user/DAT110')]
+print(files)
 
 
 
