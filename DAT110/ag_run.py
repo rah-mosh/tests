@@ -27,6 +27,11 @@ except:
 #print('Code extraction was {}'.format('successful.' if success else 'unsuccessful.'))
 
 
+from os import listdir
+files = [f for f in listdir('./')]
+print(files)
+
+
 
 class TestFallingObject(unittest.TestCase):
     score = Score(10, 10, 'TestFallingObject')
