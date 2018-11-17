@@ -6,14 +6,15 @@ from user.DAT110.exercise1 import falling_object, sum_integers
 
 
 print('Extracting code fro ipynb.')
+path_wo_fileending = '../user/DAT110/exercise1'
 try:
-    filename = '../../user/DAT110/exercise1.ipynb'
+    filename = path_wo_fileending + '.ipynb'
     f = Path(filename)
     print('Could find filename: {}'.format(f.is_file()))
 
-    success = extract('../../user/DAT110/exercise1.ipynb', '../../user/DAT110/exercise1.py')
+    success = extract(path_wo_fileending + '.ipynb', path_wo_fileending + '.py')
 
-    filename = '../../user/DAT110/exercise1.py'
+    filename = path_wo_fileending + '.py'
     f = Path(filename)
     print('Could find filename: {}'.format(f.is_file()))
 
