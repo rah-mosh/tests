@@ -32,7 +32,6 @@ class TestFallingObject(unittest.TestCase):
         ok = not error and not failure
         if ok:
             self.score.increment_by(self.points_worth)
-        #print(self.score.write_json())
 
     def test_normal_case_1(self):
         self.points_worth = 4
@@ -47,7 +46,7 @@ class TestFallingObject(unittest.TestCase):
         with self.assertRaises(Exception): falling_object(-1)
 
 
-'''class TestSumIntegers(unittest.TestCase):
+class TestSumIntegers(unittest.TestCase):
     score = Score(8, 20, 'TestSumIntegers')
     points_worth = 0
 
@@ -75,7 +74,7 @@ class TestFallingObject(unittest.TestCase):
 
     def test_negative(self):
         self.points_worth = 2
-        with self.assertRaises(Exception): sum_integers([1, 20, -1])'''
+        with self.assertRaises(Exception): sum_integers([1, 20, -1])
 
 if __name__ == '__main__':
     unittest.main()
