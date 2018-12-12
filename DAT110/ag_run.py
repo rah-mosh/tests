@@ -27,6 +27,7 @@ print('Code extraction was {}'.format('successful.' if success else 'unsuccessfu
 # import your test modules
 import ex1
 import ex2
+import ex3
 
 # initialize the test suite
 loader = unittest.TestLoader()
@@ -35,6 +36,7 @@ suite  = unittest.TestSuite()
 # add tests to the test suite
 suite.addTests(loader.loadTestsFromModule(ex1))
 suite.addTests(loader.loadTestsFromModule(ex2))
+suite.addTests(loader.loadTestsFromModule(ex3))
 
 # initialize a runner, pass it your suite and run it
 runner = unittest.TextTestRunner(verbosity=3)
