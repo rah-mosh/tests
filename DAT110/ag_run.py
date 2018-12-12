@@ -17,6 +17,12 @@ print('Could {} find file.'.format('not' if not f.is_file() else ''))
 success = extract(path_wo_fileending + '.ipynb', path_wo_fileending + '.py')
 print('Code extraction was {}'.format('successful.' if success else 'unsuccessful.'))
 
+print('Extracting code fro ipynb.')
+path_wo_fileending = 'user/DAT110/exercise3'
+f = Path(path_wo_fileending + '.ipynb')
+print('Could {} find file.'.format('not' if not f.is_file() else ''))
+success = extract(path_wo_fileending + '.ipynb', path_wo_fileending + '.py')
+print('Code extraction was {}'.format('successful.' if success else 'unsuccessful.'))
 
 #from user.DAT110.exercise1 import falling_object, sum_integers, falling_object_more
 
@@ -42,6 +48,5 @@ try:
     # initialize a runner, pass it your suite and run it
     runner = unittest.TextTestRunner(verbosity=3)
     result = runner.run(suite)
-
 except Exception as e:
     print(e)
