@@ -200,4 +200,4 @@ class TestPlayer(unittest.TestCase):
         self.assertEqual(str(self.p), "Player " + str(self.p.get_ID()) + ": Ola has points: 0")
 '''
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(TestFallingObject())
