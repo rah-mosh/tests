@@ -14,7 +14,7 @@ print('Code extraction was {}'.format('successful.' if success else 'unsuccessfu
 
 from user.DAT110.exercise1 import falling_object, sum_integers, falling_object_more
 
-
+'''
 print('Extracting code fro ipynb.')
 path_wo_fileending = 'user/DAT110/exercise3'
 
@@ -25,6 +25,7 @@ success = extract(path_wo_fileending + '.ipynb', path_wo_fileending + '.py')
 print('Code extraction was {}'.format('successful.' if success else 'unsuccessful.'))
 
 from user.DAT110.exercise3 import Player
+'''
 
 # TODO: should the imports be in try-except clause?
 # TODO: extract tests for different exercises in different files.
@@ -131,7 +132,7 @@ class TestFallingObjectMore (unittest.TestCase):
         self.points_worth = 2
         with self.assertRaises(Exception): falling_object_more(1, -1)
 
-
+'''
 class TestPlayer(unittest.TestCase):
     score = Score(70, 100, 'TestPlayer')
     points_worth = 0
@@ -197,6 +198,6 @@ class TestPlayer(unittest.TestCase):
     def test_toString(self):
         self.points_worth = 20
         self.assertEqual(str(self.p), "Player " + str(self.p.get_ID()) + ": Ola has points: 0")
-
+'''
 if __name__ == '__main__':
     unittest.main()
