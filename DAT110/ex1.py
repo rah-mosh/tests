@@ -1,4 +1,5 @@
 import unittest
+from test.score import Score
 from user.DAT110.exercise1 import falling_object, sum_integers, falling_object_more
 
 class TestFallingObject(unittest.TestCase):
