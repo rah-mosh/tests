@@ -38,6 +38,10 @@ suite.addTests(loader.loadTestsFromModule(ex1))
 suite.addTests(loader.loadTestsFromModule(ex2))
 suite.addTests(loader.loadTestsFromModule(ex3))
 
-# initialize a runner, pass it your suite and run it
-runner = unittest.TextTestRunner(verbosity=3)
-result = runner.run(suite)
+try:
+    # initialize a runner, pass it your suite and run it
+    runner = unittest.TextTestRunner(verbosity=3)
+    result = runner.run(suite)
+
+except Exception as e:
+    print(e)
