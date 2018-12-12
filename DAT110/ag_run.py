@@ -5,12 +5,18 @@ from test.code_extractor import extract
 
 print('Extracting code fro ipynb.')
 path_wo_fileending = 'user/DAT110/exercise1'
-
 f = Path(path_wo_fileending + '.ipynb')
 print('Could {} find file.'.format('not' if not f.is_file() else ''))
-
 success = extract(path_wo_fileending + '.ipynb', path_wo_fileending + '.py')
 print('Code extraction was {}'.format('successful.' if success else 'unsuccessful.'))
+
+print('Extracting code fro ipynb.')
+path_wo_fileending = 'user/DAT110/exercise2'
+f = Path(path_wo_fileending + '.ipynb')
+print('Could {} find file.'.format('not' if not f.is_file() else ''))
+success = extract(path_wo_fileending + '.ipynb', path_wo_fileending + '.py')
+print('Code extraction was {}'.format('successful.' if success else 'unsuccessful.'))
+
 
 #from user.DAT110.exercise1 import falling_object, sum_integers, falling_object_more
 
@@ -20,7 +26,7 @@ print('Code extraction was {}'.format('successful.' if success else 'unsuccessfu
 
 # import your test modules
 import ex1
-#import andre
+import ex2
 
 # initialize the test suite
 loader = unittest.TestLoader()
@@ -28,7 +34,7 @@ suite  = unittest.TestSuite()
 
 # add tests to the test suite
 suite.addTests(loader.loadTestsFromModule(ex1))
-#suite.addTests(loader.loadTestsFromModule(andre))
+suite.addTests(loader.loadTestsFromModule(ex2))
 
 # initialize a runner, pass it your suite and run it
 runner = unittest.TextTestRunner(verbosity=3)
