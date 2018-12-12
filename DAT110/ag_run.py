@@ -16,7 +16,7 @@ from user.DAT110.exercise1 import falling_object, sum_integers, falling_object_m
 
 
 print('Extracting code fro ipynb.')
-path_wo_fileending = 'user/DAT110/exercise2'
+path_wo_fileending = 'user/DAT110/exercise3'
 
 f = Path(path_wo_fileending + '.ipynb')
 print('Could {} find file.'.format('not' if not f.is_file() else ''))
