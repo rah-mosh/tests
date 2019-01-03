@@ -23,11 +23,7 @@ f = Path(path_wo_fileending + '.ipynb')
 print('Could {} find file.'.format('not' if not f.is_file() else ''))
 success = extract(path_wo_fileending + '.ipynb', path_wo_fileending + '.py')
 print('Code extraction was {}'.format('successful.' if success else 'unsuccessful.'))
-
-#from user.DAT110.exercise1 import falling_object, sum_integers, falling_object_more
-
-# TODO: should the imports be in try-except clause?
-# TODO: extract tests for different exercises in different files.
+# TODO: make utils file with function for these lines
 
 
 # import your test modules
@@ -44,6 +40,8 @@ suite.addTests(loader.loadTestsFromModule(ex1))
 suite.addTests(loader.loadTestsFromModule(ex2))
 suite.addTests(loader.loadTestsFromModule(ex3))
 
+# TODO: should the imports be in try-except clause? Should running each test be in separate try-except? Will it work?
+# Currently crashing if faulty import or faulty test/student answer.
 try:
     # initialize a runner, pass it your suite and run it
     runner = unittest.TextTestRunner(verbosity=3)
